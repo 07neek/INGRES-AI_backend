@@ -1,0 +1,1255 @@
+{
+  "metadata": {
+    "title": "INGRES-AI Reference Groundwater Dataset (Sample)",
+    "modeled_on": "CGWB Dynamic Ground Water Resource Assessment categories, as surfaced via INGRES / India-WRIS",
+    "coverage_years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "disclaimer": "Synthetic sample data for development and hackathon demo purposes. NOT official CGWB/INGRES figures. Set USE_LIVE_WATER_API=true with a valid WATER_DATA_API_KEY and WATER_DATA_RESOURCE_ID to pull live records from the National Water Data Portal (data.gov.in) or India-WRIS instead."
+  },
+  "records": [
+    {
+      "state": "Punjab",
+      "district": "Sangrur",
+      "block": "Sangrur",
+      "latitude": 30.2458,
+      "longitude": 75.8421,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 34182.8,
+          "annual_ground_water_extraction_ham": 58321.3,
+          "stage_of_extraction_percent": 170.6,
+          "category": "Over-Exploited",
+          "rainfall_mm": 601.6,
+          "pre_monsoon_level_mbgl": 8.34,
+          "post_monsoon_level_mbgl": 5.06
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 34182.8,
+          "annual_ground_water_extraction_ham": 59455.7,
+          "stage_of_extraction_percent": 173.9,
+          "category": "Over-Exploited",
+          "rainfall_mm": 551.3,
+          "pre_monsoon_level_mbgl": 8.14,
+          "post_monsoon_level_mbgl": 6.2
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 34182.8,
+          "annual_ground_water_extraction_ham": 61538.2,
+          "stage_of_extraction_percent": 180.0,
+          "category": "Over-Exploited",
+          "rainfall_mm": 488.0,
+          "pre_monsoon_level_mbgl": 8.6,
+          "post_monsoon_level_mbgl": 5.8
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 34182.8,
+          "annual_ground_water_extraction_ham": 62973.2,
+          "stage_of_extraction_percent": 184.2,
+          "category": "Over-Exploited",
+          "rainfall_mm": 519.0,
+          "pre_monsoon_level_mbgl": 9.23,
+          "post_monsoon_level_mbgl": 6.11
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 34182.8,
+          "annual_ground_water_extraction_ham": 63420.2,
+          "stage_of_extraction_percent": 185.5,
+          "category": "Over-Exploited",
+          "rainfall_mm": 612.7,
+          "pre_monsoon_level_mbgl": 9.64,
+          "post_monsoon_level_mbgl": 7.46
+        }
+      ]
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "block": "Bathinda",
+      "latitude": 30.211,
+      "longitude": 74.9455,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 19664.4,
+          "annual_ground_water_extraction_ham": 30669.3,
+          "stage_of_extraction_percent": 156.0,
+          "category": "Over-Exploited",
+          "rainfall_mm": 1011.9,
+          "pre_monsoon_level_mbgl": 8.97,
+          "post_monsoon_level_mbgl": 6.26
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 19664.4,
+          "annual_ground_water_extraction_ham": 31961.7,
+          "stage_of_extraction_percent": 162.5,
+          "category": "Over-Exploited",
+          "rainfall_mm": 1113.2,
+          "pre_monsoon_level_mbgl": 8.96,
+          "post_monsoon_level_mbgl": 5.51
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 19664.4,
+          "annual_ground_water_extraction_ham": 32130.2,
+          "stage_of_extraction_percent": 163.4,
+          "category": "Over-Exploited",
+          "rainfall_mm": 1084.8,
+          "pre_monsoon_level_mbgl": 9.44,
+          "post_monsoon_level_mbgl": 6.7
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 19664.4,
+          "annual_ground_water_extraction_ham": 33195.2,
+          "stage_of_extraction_percent": 168.8,
+          "category": "Over-Exploited",
+          "rainfall_mm": 1088.8,
+          "pre_monsoon_level_mbgl": 9.58,
+          "post_monsoon_level_mbgl": 7.99
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 19664.4,
+          "annual_ground_water_extraction_ham": 33161.9,
+          "stage_of_extraction_percent": 168.6,
+          "category": "Over-Exploited",
+          "rainfall_mm": 1042.8,
+          "pre_monsoon_level_mbgl": 9.32,
+          "post_monsoon_level_mbgl": 7.35
+        }
+      ]
+    },
+    {
+      "state": "Rajasthan",
+      "district": "Jaipur",
+      "block": "Jaipur",
+      "latitude": 26.9124,
+      "longitude": 75.7873,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 18030.0,
+          "annual_ground_water_extraction_ham": 17186.9,
+          "stage_of_extraction_percent": 95.3,
+          "category": "Critical",
+          "rainfall_mm": 682.1,
+          "pre_monsoon_level_mbgl": 10.85,
+          "post_monsoon_level_mbgl": 8.82
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 18030.0,
+          "annual_ground_water_extraction_ham": 18153.2,
+          "stage_of_extraction_percent": 100.7,
+          "category": "Over-Exploited",
+          "rainfall_mm": 726.6,
+          "pre_monsoon_level_mbgl": 11.37,
+          "post_monsoon_level_mbgl": 9.53
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 18030.0,
+          "annual_ground_water_extraction_ham": 18416.9,
+          "stage_of_extraction_percent": 102.1,
+          "category": "Over-Exploited",
+          "rainfall_mm": 649.0,
+          "pre_monsoon_level_mbgl": 11.39,
+          "post_monsoon_level_mbgl": 7.91
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 18030.0,
+          "annual_ground_water_extraction_ham": 18787.3,
+          "stage_of_extraction_percent": 104.2,
+          "category": "Over-Exploited",
+          "rainfall_mm": 712.0,
+          "pre_monsoon_level_mbgl": 11.83,
+          "post_monsoon_level_mbgl": 8.64
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 18030.0,
+          "annual_ground_water_extraction_ham": 19360.6,
+          "stage_of_extraction_percent": 107.4,
+          "category": "Over-Exploited",
+          "rainfall_mm": 659.5,
+          "pre_monsoon_level_mbgl": 11.51,
+          "post_monsoon_level_mbgl": 9.38
+        }
+      ]
+    },
+    {
+      "state": "Rajasthan",
+      "district": "Jodhpur",
+      "block": "Jodhpur",
+      "latitude": 26.2389,
+      "longitude": 73.0243,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 23032.2,
+          "annual_ground_water_extraction_ham": 31296.6,
+          "stage_of_extraction_percent": 135.9,
+          "category": "Over-Exploited",
+          "rainfall_mm": 636.4,
+          "pre_monsoon_level_mbgl": 13.67,
+          "post_monsoon_level_mbgl": 11.38
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 23032.2,
+          "annual_ground_water_extraction_ham": 32146.7,
+          "stage_of_extraction_percent": 139.6,
+          "category": "Over-Exploited",
+          "rainfall_mm": 659.5,
+          "pre_monsoon_level_mbgl": 13.64,
+          "post_monsoon_level_mbgl": 11.65
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 23032.2,
+          "annual_ground_water_extraction_ham": 32546.1,
+          "stage_of_extraction_percent": 141.3,
+          "category": "Over-Exploited",
+          "rainfall_mm": 628.1,
+          "pre_monsoon_level_mbgl": 14.17,
+          "post_monsoon_level_mbgl": 10.87
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 23032.2,
+          "annual_ground_water_extraction_ham": 33165.7,
+          "stage_of_extraction_percent": 144.0,
+          "category": "Over-Exploited",
+          "rainfall_mm": 621.1,
+          "pre_monsoon_level_mbgl": 14.78,
+          "post_monsoon_level_mbgl": 12.26
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 23032.2,
+          "annual_ground_water_extraction_ham": 33616.5,
+          "stage_of_extraction_percent": 146.0,
+          "category": "Over-Exploited",
+          "rainfall_mm": 593.6,
+          "pre_monsoon_level_mbgl": 14.35,
+          "post_monsoon_level_mbgl": 11.6
+        }
+      ]
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Wardha",
+      "block": "Wardha",
+      "latitude": 20.7453,
+      "longitude": 78.6022,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 38762.4,
+          "annual_ground_water_extraction_ham": 30005.2,
+          "stage_of_extraction_percent": 77.4,
+          "category": "Semi-Critical",
+          "rainfall_mm": 861.6,
+          "pre_monsoon_level_mbgl": 6.53,
+          "post_monsoon_level_mbgl": 3.09
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 38762.4,
+          "annual_ground_water_extraction_ham": 31631.6,
+          "stage_of_extraction_percent": 81.6,
+          "category": "Semi-Critical",
+          "rainfall_mm": 704.0,
+          "pre_monsoon_level_mbgl": 6.83,
+          "post_monsoon_level_mbgl": 3.97
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 38762.4,
+          "annual_ground_water_extraction_ham": 31701.8,
+          "stage_of_extraction_percent": 81.8,
+          "category": "Semi-Critical",
+          "rainfall_mm": 744.9,
+          "pre_monsoon_level_mbgl": 6.91,
+          "post_monsoon_level_mbgl": 5.19
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 38762.4,
+          "annual_ground_water_extraction_ham": 32201.4,
+          "stage_of_extraction_percent": 83.1,
+          "category": "Semi-Critical",
+          "rainfall_mm": 774.8,
+          "pre_monsoon_level_mbgl": 7.3,
+          "post_monsoon_level_mbgl": 4.05
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 38762.4,
+          "annual_ground_water_extraction_ham": 32567.0,
+          "stage_of_extraction_percent": 84.0,
+          "category": "Semi-Critical",
+          "rainfall_mm": 782.3,
+          "pre_monsoon_level_mbgl": 6.83,
+          "post_monsoon_level_mbgl": 3.5
+        }
+      ]
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Nagpur",
+      "block": "Nagpur (Rural)",
+      "latitude": 21.1458,
+      "longitude": 79.0882,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 41115.6,
+          "annual_ground_water_extraction_ham": 21604.1,
+          "stage_of_extraction_percent": 52.5,
+          "category": "Safe",
+          "rainfall_mm": 658.6,
+          "pre_monsoon_level_mbgl": 11.32,
+          "post_monsoon_level_mbgl": 8.74
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 41115.6,
+          "annual_ground_water_extraction_ham": 22117.4,
+          "stage_of_extraction_percent": 53.8,
+          "category": "Safe",
+          "rainfall_mm": 719.0,
+          "pre_monsoon_level_mbgl": 10.74,
+          "post_monsoon_level_mbgl": 8.59
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 41115.6,
+          "annual_ground_water_extraction_ham": 20721.2,
+          "stage_of_extraction_percent": 50.4,
+          "category": "Safe",
+          "rainfall_mm": 782.8,
+          "pre_monsoon_level_mbgl": 11.48,
+          "post_monsoon_level_mbgl": 8.32
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 41115.6,
+          "annual_ground_water_extraction_ham": 21477.8,
+          "stage_of_extraction_percent": 52.2,
+          "category": "Safe",
+          "rainfall_mm": 643.4,
+          "pre_monsoon_level_mbgl": 11.51,
+          "post_monsoon_level_mbgl": 8.12
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 41115.6,
+          "annual_ground_water_extraction_ham": 21186.2,
+          "stage_of_extraction_percent": 51.5,
+          "category": "Safe",
+          "rainfall_mm": 711.9,
+          "pre_monsoon_level_mbgl": 10.89,
+          "post_monsoon_level_mbgl": 7.87
+        }
+      ]
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "block": "Haveli",
+      "latitude": 18.5204,
+      "longitude": 73.8567,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 37975.0,
+          "annual_ground_water_extraction_ham": 28196.1,
+          "stage_of_extraction_percent": 74.2,
+          "category": "Semi-Critical",
+          "rainfall_mm": 583.0,
+          "pre_monsoon_level_mbgl": 10.1,
+          "post_monsoon_level_mbgl": 7.75
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 37975.0,
+          "annual_ground_water_extraction_ham": 28010.0,
+          "stage_of_extraction_percent": 73.8,
+          "category": "Semi-Critical",
+          "rainfall_mm": 626.9,
+          "pre_monsoon_level_mbgl": 10.08,
+          "post_monsoon_level_mbgl": 8.18
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 37975.0,
+          "annual_ground_water_extraction_ham": 28655.4,
+          "stage_of_extraction_percent": 75.5,
+          "category": "Semi-Critical",
+          "rainfall_mm": 699.8,
+          "pre_monsoon_level_mbgl": 10.11,
+          "post_monsoon_level_mbgl": 7.73
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 37975.0,
+          "annual_ground_water_extraction_ham": 29502.0,
+          "stage_of_extraction_percent": 77.7,
+          "category": "Semi-Critical",
+          "rainfall_mm": 560.0,
+          "pre_monsoon_level_mbgl": 9.87,
+          "post_monsoon_level_mbgl": 7.69
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 37975.0,
+          "annual_ground_water_extraction_ham": 30092.0,
+          "stage_of_extraction_percent": 79.2,
+          "category": "Semi-Critical",
+          "rainfall_mm": 577.4,
+          "pre_monsoon_level_mbgl": 9.96,
+          "post_monsoon_level_mbgl": 8.32
+        }
+      ]
+    },
+    {
+      "state": "Karnataka",
+      "district": "Kolar",
+      "block": "Kolar",
+      "latitude": 13.1367,
+      "longitude": 78.1298,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 33933.1,
+          "annual_ground_water_extraction_ham": 40651.2,
+          "stage_of_extraction_percent": 119.8,
+          "category": "Over-Exploited",
+          "rainfall_mm": 607.3,
+          "pre_monsoon_level_mbgl": 13.03,
+          "post_monsoon_level_mbgl": 10.19
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 33933.1,
+          "annual_ground_water_extraction_ham": 40302.7,
+          "stage_of_extraction_percent": 118.8,
+          "category": "Over-Exploited",
+          "rainfall_mm": 617.1,
+          "pre_monsoon_level_mbgl": 13.77,
+          "post_monsoon_level_mbgl": 11.13
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 33933.1,
+          "annual_ground_water_extraction_ham": 41487.7,
+          "stage_of_extraction_percent": 122.3,
+          "category": "Over-Exploited",
+          "rainfall_mm": 721.5,
+          "pre_monsoon_level_mbgl": 13.84,
+          "post_monsoon_level_mbgl": 11.96
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 33933.1,
+          "annual_ground_water_extraction_ham": 41596.8,
+          "stage_of_extraction_percent": 122.6,
+          "category": "Over-Exploited",
+          "rainfall_mm": 664.9,
+          "pre_monsoon_level_mbgl": 13.71,
+          "post_monsoon_level_mbgl": 11.28
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 33933.1,
+          "annual_ground_water_extraction_ham": 43415.8,
+          "stage_of_extraction_percent": 127.9,
+          "category": "Over-Exploited",
+          "rainfall_mm": 703.7,
+          "pre_monsoon_level_mbgl": 14.33,
+          "post_monsoon_level_mbgl": 12.63
+        }
+      ]
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Rural",
+      "block": "Devanahalli",
+      "latitude": 13.2437,
+      "longitude": 77.7119,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 27078.6,
+          "annual_ground_water_extraction_ham": 24842.8,
+          "stage_of_extraction_percent": 91.7,
+          "category": "Critical",
+          "rainfall_mm": 687.0,
+          "pre_monsoon_level_mbgl": 12.85,
+          "post_monsoon_level_mbgl": 10.51
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 27078.6,
+          "annual_ground_water_extraction_ham": 25397.8,
+          "stage_of_extraction_percent": 93.8,
+          "category": "Critical",
+          "rainfall_mm": 696.6,
+          "pre_monsoon_level_mbgl": 13.38,
+          "post_monsoon_level_mbgl": 10.99
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 27078.6,
+          "annual_ground_water_extraction_ham": 26701.3,
+          "stage_of_extraction_percent": 98.6,
+          "category": "Critical",
+          "rainfall_mm": 744.7,
+          "pre_monsoon_level_mbgl": 12.84,
+          "post_monsoon_level_mbgl": 9.34
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 27078.6,
+          "annual_ground_water_extraction_ham": 27181.5,
+          "stage_of_extraction_percent": 100.4,
+          "category": "Over-Exploited",
+          "rainfall_mm": 811.7,
+          "pre_monsoon_level_mbgl": 13.69,
+          "post_monsoon_level_mbgl": 10.49
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 27078.6,
+          "annual_ground_water_extraction_ham": 26789.3,
+          "stage_of_extraction_percent": 98.9,
+          "category": "Critical",
+          "rainfall_mm": 734.3,
+          "pre_monsoon_level_mbgl": 13.27,
+          "post_monsoon_level_mbgl": 10.97
+        }
+      ]
+    },
+    {
+      "state": "Tamil Nadu",
+      "district": "Chennai",
+      "block": "Sholavaram",
+      "latitude": 13.1281,
+      "longitude": 80.1786,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 16759.1,
+          "annual_ground_water_extraction_ham": 15221.6,
+          "stage_of_extraction_percent": 90.8,
+          "category": "Critical",
+          "rainfall_mm": 803.9,
+          "pre_monsoon_level_mbgl": 13.85,
+          "post_monsoon_level_mbgl": 11.5
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 16759.1,
+          "annual_ground_water_extraction_ham": 16069.7,
+          "stage_of_extraction_percent": 95.9,
+          "category": "Critical",
+          "rainfall_mm": 837.7,
+          "pre_monsoon_level_mbgl": 14.06,
+          "post_monsoon_level_mbgl": 11.12
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 16759.1,
+          "annual_ground_water_extraction_ham": 15665.4,
+          "stage_of_extraction_percent": 93.5,
+          "category": "Critical",
+          "rainfall_mm": 725.9,
+          "pre_monsoon_level_mbgl": 14.51,
+          "post_monsoon_level_mbgl": 11.85
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 16759.1,
+          "annual_ground_water_extraction_ham": 16258.2,
+          "stage_of_extraction_percent": 97.0,
+          "category": "Critical",
+          "rainfall_mm": 798.1,
+          "pre_monsoon_level_mbgl": 13.91,
+          "post_monsoon_level_mbgl": 11.24
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 16759.1,
+          "annual_ground_water_extraction_ham": 16493.3,
+          "stage_of_extraction_percent": 98.4,
+          "category": "Critical",
+          "rainfall_mm": 814.9,
+          "pre_monsoon_level_mbgl": 14.12,
+          "post_monsoon_level_mbgl": 10.7
+        }
+      ]
+    },
+    {
+      "state": "Tamil Nadu",
+      "district": "Coimbatore",
+      "block": "Coimbatore North",
+      "latitude": 11.0168,
+      "longitude": 76.9558,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 17403.3,
+          "annual_ground_water_extraction_ham": 13379.0,
+          "stage_of_extraction_percent": 76.9,
+          "category": "Semi-Critical",
+          "rainfall_mm": 609.8,
+          "pre_monsoon_level_mbgl": 10.46,
+          "post_monsoon_level_mbgl": 7.18
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 17403.3,
+          "annual_ground_water_extraction_ham": 13179.7,
+          "stage_of_extraction_percent": 75.7,
+          "category": "Semi-Critical",
+          "rainfall_mm": 667.3,
+          "pre_monsoon_level_mbgl": 10.94,
+          "post_monsoon_level_mbgl": 8.6
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 17403.3,
+          "annual_ground_water_extraction_ham": 13647.4,
+          "stage_of_extraction_percent": 78.4,
+          "category": "Semi-Critical",
+          "rainfall_mm": 655.8,
+          "pre_monsoon_level_mbgl": 11.27,
+          "post_monsoon_level_mbgl": 9.36
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 17403.3,
+          "annual_ground_water_extraction_ham": 13936.7,
+          "stage_of_extraction_percent": 80.1,
+          "category": "Semi-Critical",
+          "rainfall_mm": 610.4,
+          "pre_monsoon_level_mbgl": 10.92,
+          "post_monsoon_level_mbgl": 8.08
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 17403.3,
+          "annual_ground_water_extraction_ham": 13748.6,
+          "stage_of_extraction_percent": 79.0,
+          "category": "Semi-Critical",
+          "rainfall_mm": 622.8,
+          "pre_monsoon_level_mbgl": 11.28,
+          "post_monsoon_level_mbgl": 9.63
+        }
+      ]
+    },
+    {
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "block": "Rajendranagar",
+      "latitude": 17.322,
+      "longitude": 78.4083,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 28748.6,
+          "annual_ground_water_extraction_ham": 19798.1,
+          "stage_of_extraction_percent": 68.9,
+          "category": "Safe",
+          "rainfall_mm": 1053.3,
+          "pre_monsoon_level_mbgl": 13.78,
+          "post_monsoon_level_mbgl": 10.41
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 28748.6,
+          "annual_ground_water_extraction_ham": 21189.0,
+          "stage_of_extraction_percent": 73.7,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1159.8,
+          "pre_monsoon_level_mbgl": 13.93,
+          "post_monsoon_level_mbgl": 12.11
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 28748.6,
+          "annual_ground_water_extraction_ham": 21351.2,
+          "stage_of_extraction_percent": 74.3,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1131.7,
+          "pre_monsoon_level_mbgl": 14.19,
+          "post_monsoon_level_mbgl": 10.72
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 28748.6,
+          "annual_ground_water_extraction_ham": 21322.8,
+          "stage_of_extraction_percent": 74.2,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1020.4,
+          "pre_monsoon_level_mbgl": 14.41,
+          "post_monsoon_level_mbgl": 12.31
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 28748.6,
+          "annual_ground_water_extraction_ham": 21566.3,
+          "stage_of_extraction_percent": 75.0,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1169.4,
+          "pre_monsoon_level_mbgl": 13.93,
+          "post_monsoon_level_mbgl": 12.2
+        }
+      ]
+    },
+    {
+      "state": "Telangana",
+      "district": "Warangal",
+      "block": "Warangal",
+      "latitude": 17.9689,
+      "longitude": 79.5941,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 18211.1,
+          "annual_ground_water_extraction_ham": 8472.6,
+          "stage_of_extraction_percent": 46.5,
+          "category": "Safe",
+          "rainfall_mm": 889.1,
+          "pre_monsoon_level_mbgl": 7.94,
+          "post_monsoon_level_mbgl": 5.17
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 18211.1,
+          "annual_ground_water_extraction_ham": 8198.6,
+          "stage_of_extraction_percent": 45.0,
+          "category": "Safe",
+          "rainfall_mm": 852.4,
+          "pre_monsoon_level_mbgl": 8.52,
+          "post_monsoon_level_mbgl": 5.33
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 18211.1,
+          "annual_ground_water_extraction_ham": 8078.7,
+          "stage_of_extraction_percent": 44.4,
+          "category": "Safe",
+          "rainfall_mm": 842.0,
+          "pre_monsoon_level_mbgl": 8.03,
+          "post_monsoon_level_mbgl": 6.52
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 18211.1,
+          "annual_ground_water_extraction_ham": 8733.2,
+          "stage_of_extraction_percent": 48.0,
+          "category": "Safe",
+          "rainfall_mm": 876.2,
+          "pre_monsoon_level_mbgl": 8.04,
+          "post_monsoon_level_mbgl": 5.06
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 18211.1,
+          "annual_ground_water_extraction_ham": 8569.9,
+          "stage_of_extraction_percent": 47.1,
+          "category": "Safe",
+          "rainfall_mm": 842.7,
+          "pre_monsoon_level_mbgl": 7.85,
+          "post_monsoon_level_mbgl": 6.2
+        }
+      ]
+    },
+    {
+      "state": "Uttar Pradesh",
+      "district": "Meerut",
+      "block": "Meerut",
+      "latitude": 28.9845,
+      "longitude": 77.7064,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 41493.2,
+          "annual_ground_water_extraction_ham": 30984.2,
+          "stage_of_extraction_percent": 74.7,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1060.4,
+          "pre_monsoon_level_mbgl": 10.08,
+          "post_monsoon_level_mbgl": 8.33
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 41493.2,
+          "annual_ground_water_extraction_ham": 30348.7,
+          "stage_of_extraction_percent": 73.1,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1111.0,
+          "pre_monsoon_level_mbgl": 10.69,
+          "post_monsoon_level_mbgl": 7.47
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 41493.2,
+          "annual_ground_water_extraction_ham": 32030.5,
+          "stage_of_extraction_percent": 77.2,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1000.8,
+          "pre_monsoon_level_mbgl": 10.34,
+          "post_monsoon_level_mbgl": 8.63
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 41493.2,
+          "annual_ground_water_extraction_ham": 32240.5,
+          "stage_of_extraction_percent": 77.7,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1108.6,
+          "pre_monsoon_level_mbgl": 10.55,
+          "post_monsoon_level_mbgl": 7.81
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 41493.2,
+          "annual_ground_water_extraction_ham": 31399.1,
+          "stage_of_extraction_percent": 75.7,
+          "category": "Semi-Critical",
+          "rainfall_mm": 1115.9,
+          "pre_monsoon_level_mbgl": 11.01,
+          "post_monsoon_level_mbgl": 7.56
+        }
+      ]
+    },
+    {
+      "state": "Uttar Pradesh",
+      "district": "Lucknow",
+      "block": "Lucknow",
+      "latitude": 26.8467,
+      "longitude": 80.9462,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 39323.2,
+          "annual_ground_water_extraction_ham": 22092.9,
+          "stage_of_extraction_percent": 56.2,
+          "category": "Safe",
+          "rainfall_mm": 1007.9,
+          "pre_monsoon_level_mbgl": 6.54,
+          "post_monsoon_level_mbgl": 3.44
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 39323.2,
+          "annual_ground_water_extraction_ham": 22540.2,
+          "stage_of_extraction_percent": 57.3,
+          "category": "Safe",
+          "rainfall_mm": 1084.5,
+          "pre_monsoon_level_mbgl": 6.05,
+          "post_monsoon_level_mbgl": 2.98
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 39323.2,
+          "annual_ground_water_extraction_ham": 21250.4,
+          "stage_of_extraction_percent": 54.0,
+          "category": "Safe",
+          "rainfall_mm": 1094.3,
+          "pre_monsoon_level_mbgl": 6.57,
+          "post_monsoon_level_mbgl": 4.63
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 39323.2,
+          "annual_ground_water_extraction_ham": 22840.1,
+          "stage_of_extraction_percent": 58.1,
+          "category": "Safe",
+          "rainfall_mm": 1028.4,
+          "pre_monsoon_level_mbgl": 6.16,
+          "post_monsoon_level_mbgl": 3.07
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 39323.2,
+          "annual_ground_water_extraction_ham": 21878.6,
+          "stage_of_extraction_percent": 55.6,
+          "category": "Safe",
+          "rainfall_mm": 958.6,
+          "pre_monsoon_level_mbgl": 6.11,
+          "post_monsoon_level_mbgl": 3.95
+        }
+      ]
+    },
+    {
+      "state": "Bihar",
+      "district": "Patna",
+      "block": "Patna Sadar",
+      "latitude": 25.5941,
+      "longitude": 85.1376,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 40930.6,
+          "annual_ground_water_extraction_ham": 19936.2,
+          "stage_of_extraction_percent": 48.7,
+          "category": "Safe",
+          "rainfall_mm": 1065.7,
+          "pre_monsoon_level_mbgl": 8.62,
+          "post_monsoon_level_mbgl": 6.05
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 40930.6,
+          "annual_ground_water_extraction_ham": 20422.8,
+          "stage_of_extraction_percent": 49.9,
+          "category": "Safe",
+          "rainfall_mm": 1020.2,
+          "pre_monsoon_level_mbgl": 8.59,
+          "post_monsoon_level_mbgl": 6.73
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 40930.6,
+          "annual_ground_water_extraction_ham": 20347.7,
+          "stage_of_extraction_percent": 49.7,
+          "category": "Safe",
+          "rainfall_mm": 1044.3,
+          "pre_monsoon_level_mbgl": 7.87,
+          "post_monsoon_level_mbgl": 5.5
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 40930.6,
+          "annual_ground_water_extraction_ham": 19746.0,
+          "stage_of_extraction_percent": 48.2,
+          "category": "Safe",
+          "rainfall_mm": 1052.0,
+          "pre_monsoon_level_mbgl": 8.25,
+          "post_monsoon_level_mbgl": 5.73
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 40930.6,
+          "annual_ground_water_extraction_ham": 18920.6,
+          "stage_of_extraction_percent": 46.2,
+          "category": "Safe",
+          "rainfall_mm": 1094.0,
+          "pre_monsoon_level_mbgl": 7.94,
+          "post_monsoon_level_mbgl": 5.02
+        }
+      ]
+    },
+    {
+      "state": "Bihar",
+      "district": "Nalanda",
+      "block": "Bihar Sharif",
+      "latitude": 25.1985,
+      "longitude": 85.5241,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 15050.7,
+          "annual_ground_water_extraction_ham": 6787.4,
+          "stage_of_extraction_percent": 45.1,
+          "category": "Safe",
+          "rainfall_mm": 1097.8,
+          "pre_monsoon_level_mbgl": 10.44,
+          "post_monsoon_level_mbgl": 8.21
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 15050.7,
+          "annual_ground_water_extraction_ham": 6268.6,
+          "stage_of_extraction_percent": 41.6,
+          "category": "Safe",
+          "rainfall_mm": 1085.3,
+          "pre_monsoon_level_mbgl": 10.16,
+          "post_monsoon_level_mbgl": 8.03
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 15050.7,
+          "annual_ground_water_extraction_ham": 6824.0,
+          "stage_of_extraction_percent": 45.3,
+          "category": "Safe",
+          "rainfall_mm": 1094.2,
+          "pre_monsoon_level_mbgl": 10.12,
+          "post_monsoon_level_mbgl": 8.0
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 15050.7,
+          "annual_ground_water_extraction_ham": 6463.1,
+          "stage_of_extraction_percent": 42.9,
+          "category": "Safe",
+          "rainfall_mm": 1043.5,
+          "pre_monsoon_level_mbgl": 10.1,
+          "post_monsoon_level_mbgl": 8.35
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 15050.7,
+          "annual_ground_water_extraction_ham": 6442.0,
+          "stage_of_extraction_percent": 42.8,
+          "category": "Safe",
+          "rainfall_mm": 1129.5,
+          "pre_monsoon_level_mbgl": 10.39,
+          "post_monsoon_level_mbgl": 7.08
+        }
+      ]
+    },
+    {
+      "state": "Gujarat",
+      "district": "Mehsana",
+      "block": "Mehsana",
+      "latitude": 23.588,
+      "longitude": 72.3693,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 33465.4,
+          "annual_ground_water_extraction_ham": 46684.9,
+          "stage_of_extraction_percent": 139.5,
+          "category": "Over-Exploited",
+          "rainfall_mm": 681.4,
+          "pre_monsoon_level_mbgl": 10.33,
+          "post_monsoon_level_mbgl": 7.67
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 33465.4,
+          "annual_ground_water_extraction_ham": 48716.8,
+          "stage_of_extraction_percent": 145.6,
+          "category": "Over-Exploited",
+          "rainfall_mm": 709.9,
+          "pre_monsoon_level_mbgl": 10.56,
+          "post_monsoon_level_mbgl": 8.63
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 33465.4,
+          "annual_ground_water_extraction_ham": 49350.1,
+          "stage_of_extraction_percent": 147.5,
+          "category": "Over-Exploited",
+          "rainfall_mm": 779.7,
+          "pre_monsoon_level_mbgl": 11.07,
+          "post_monsoon_level_mbgl": 9.23
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 33465.4,
+          "annual_ground_water_extraction_ham": 49637.2,
+          "stage_of_extraction_percent": 148.3,
+          "category": "Over-Exploited",
+          "rainfall_mm": 718.0,
+          "pre_monsoon_level_mbgl": 11.16,
+          "post_monsoon_level_mbgl": 8.99
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 33465.4,
+          "annual_ground_water_extraction_ham": 51801.8,
+          "stage_of_extraction_percent": 154.8,
+          "category": "Over-Exploited",
+          "rainfall_mm": 755.7,
+          "pre_monsoon_level_mbgl": 11.42,
+          "post_monsoon_level_mbgl": 9.47
+        }
+      ]
+    },
+    {
+      "state": "Gujarat",
+      "district": "Jamnagar",
+      "block": "Jamnagar (Coastal)",
+      "latitude": 22.4707,
+      "longitude": 70.0577,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 20973.9,
+          "annual_ground_water_extraction_ham": 14236.2,
+          "stage_of_extraction_percent": 67.9,
+          "category": "Saline",
+          "rainfall_mm": 619.4,
+          "pre_monsoon_level_mbgl": 7.62,
+          "post_monsoon_level_mbgl": 5.29
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 20973.9,
+          "annual_ground_water_extraction_ham": 14524.2,
+          "stage_of_extraction_percent": 69.2,
+          "category": "Saline",
+          "rainfall_mm": 514.5,
+          "pre_monsoon_level_mbgl": 8.16,
+          "post_monsoon_level_mbgl": 5.67
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 20973.9,
+          "annual_ground_water_extraction_ham": 14245.5,
+          "stage_of_extraction_percent": 67.9,
+          "category": "Saline",
+          "rainfall_mm": 588.4,
+          "pre_monsoon_level_mbgl": 7.66,
+          "post_monsoon_level_mbgl": 4.66
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 20973.9,
+          "annual_ground_water_extraction_ham": 14923.0,
+          "stage_of_extraction_percent": 71.2,
+          "category": "Saline",
+          "rainfall_mm": 500.5,
+          "pre_monsoon_level_mbgl": 8.04,
+          "post_monsoon_level_mbgl": 6.19
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 20973.9,
+          "annual_ground_water_extraction_ham": 15245.9,
+          "stage_of_extraction_percent": 72.7,
+          "category": "Saline",
+          "rainfall_mm": 566.3,
+          "pre_monsoon_level_mbgl": 7.79,
+          "post_monsoon_level_mbgl": 5.79
+        }
+      ]
+    },
+    {
+      "state": "Andhra Pradesh",
+      "district": "Anantapur",
+      "block": "Anantapur",
+      "latitude": 14.6819,
+      "longitude": 77.6006,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 40450.1,
+          "annual_ground_water_extraction_ham": 39575.5,
+          "stage_of_extraction_percent": 97.8,
+          "category": "Critical",
+          "rainfall_mm": 879.1,
+          "pre_monsoon_level_mbgl": 12.49,
+          "post_monsoon_level_mbgl": 9.09
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 40450.1,
+          "annual_ground_water_extraction_ham": 40715.9,
+          "stage_of_extraction_percent": 100.7,
+          "category": "Over-Exploited",
+          "rainfall_mm": 819.1,
+          "pre_monsoon_level_mbgl": 12.72,
+          "post_monsoon_level_mbgl": 10.21
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 40450.1,
+          "annual_ground_water_extraction_ham": 41280.5,
+          "stage_of_extraction_percent": 102.1,
+          "category": "Over-Exploited",
+          "rainfall_mm": 808.7,
+          "pre_monsoon_level_mbgl": 13.0,
+          "post_monsoon_level_mbgl": 10.01
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 40450.1,
+          "annual_ground_water_extraction_ham": 41248.3,
+          "stage_of_extraction_percent": 102.0,
+          "category": "Over-Exploited",
+          "rainfall_mm": 762.5,
+          "pre_monsoon_level_mbgl": 12.62,
+          "post_monsoon_level_mbgl": 9.84
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 40450.1,
+          "annual_ground_water_extraction_ham": 42524.8,
+          "stage_of_extraction_percent": 105.1,
+          "category": "Over-Exploited",
+          "rainfall_mm": 804.5,
+          "pre_monsoon_level_mbgl": 13.06,
+          "post_monsoon_level_mbgl": 11.01
+        }
+      ]
+    },
+    {
+      "state": "Andhra Pradesh",
+      "district": "Krishna",
+      "block": "Vijayawada Rural",
+      "latitude": 16.5062,
+      "longitude": 80.648,
+      "yearly": [
+        {
+          "year": 2019,
+          "annual_extractable_resource_ham": 17324.5,
+          "annual_ground_water_extraction_ham": 9892.0,
+          "stage_of_extraction_percent": 57.1,
+          "category": "Safe",
+          "rainfall_mm": 713.6,
+          "pre_monsoon_level_mbgl": 7.88,
+          "post_monsoon_level_mbgl": 5.92
+        },
+        {
+          "year": 2020,
+          "annual_extractable_resource_ham": 17324.5,
+          "annual_ground_water_extraction_ham": 10268.2,
+          "stage_of_extraction_percent": 59.3,
+          "category": "Safe",
+          "rainfall_mm": 740.2,
+          "pre_monsoon_level_mbgl": 7.85,
+          "post_monsoon_level_mbgl": 5.53
+        },
+        {
+          "year": 2021,
+          "annual_extractable_resource_ham": 17324.5,
+          "annual_ground_water_extraction_ham": 10189.1,
+          "stage_of_extraction_percent": 58.8,
+          "category": "Safe",
+          "rainfall_mm": 693.7,
+          "pre_monsoon_level_mbgl": 7.99,
+          "post_monsoon_level_mbgl": 5.65
+        },
+        {
+          "year": 2022,
+          "annual_extractable_resource_ham": 17324.5,
+          "annual_ground_water_extraction_ham": 10554.8,
+          "stage_of_extraction_percent": 60.9,
+          "category": "Safe",
+          "rainfall_mm": 720.6,
+          "pre_monsoon_level_mbgl": 8.4,
+          "post_monsoon_level_mbgl": 5.19
+        },
+        {
+          "year": 2023,
+          "annual_extractable_resource_ham": 17324.5,
+          "annual_ground_water_extraction_ham": 10486.2,
+          "stage_of_extraction_percent": 60.5,
+          "category": "Safe",
+          "rainfall_mm": 688.0,
+          "pre_monsoon_level_mbgl": 7.87,
+          "post_monsoon_level_mbgl": 5.67
+        }
+      ]
+    }
+  ]
+}
