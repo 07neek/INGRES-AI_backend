@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INGRES-AI - Groundwater Intelligence</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Chart.js — renders the backend's `chart` payload in chat replies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              800: '#1e40af',
+              900: '#0f172a',
+              sidebar: '#0d1527',
+              sidebarHover: '#17233d',
+              darkBg: '#0b0f19',
+              darkCard: '#131b2e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-full bg-slate-50 dark:bg-brand-darkBg text-slate-800 dark:text-slate-100 flex overflow-hidden font-sans transition-colors duration-200">
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside id="sidebar" class="w-72 bg-brand-sidebar text-slate-300 flex flex-col transition-all duration-300 z-30 shrink-0 border-r border-slate-800">
+    <!-- Sidebar Header / Logo -->
+    <div class="h-16 flex items-center justify-between px-4 border-b border-slate-800">
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="switchView('home')">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">
+          <i class="fa-solid fa-droplet text-sm"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-white tracking-wide text-base leading-none">INGRES-AI</h1>
+          <span class="text-[10px] text-slate-400 leading-tight">Ministry of Jal Shakti - CGWB</span>
+        </div>
+      </div>
+      <button onclick="toggleSidebar()" class="text-slate-400 hover:text-white p-1 rounded">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Navigation Scroll Region -->
+    <div class="flex-1 overflow-y-auto px-3 py-4 space-y-6">
+      <!-- Nav Group 1: Ask -->
+      <div class="space-y-1">
+        <button onclick="toggleAccordion('acc-ask')" class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-brand-sidebarHover text-slate-200 text-sm font-medium">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-circle-question text-blue-400"></i>
+            <span>Ask a Question</span>
+          </div>
+          <i id="icon-acc-ask" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+        </button>
+        <div id="acc-ask" class="pl-9 pr-2 py-1 space-y-1 text-xs">
+          <a href="#" onclick="switchView('home')" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-brand-sidebarHover">New Conversation</a>
+          <a href="#" class="block py-1.5 px-2 rounded text-slate-400 hover:text-white hover:bg-brand-sidebarHover">Change Language</a>
+        </div>
+      </div>
+
+      <!-- Nav Group 2: Map -->
+      <div class="space-y-1">
+        <button onclick="toggleAccordion('acc-map')" class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-brand-sidebarHover text-slate-200 text-sm font-medium">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-map text-emerald-400"></i>
+            <span>Explore the Map</span>
+          </div>
+          <i id="icon-acc-map" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+        </button>
+        <div id="acc-map" class="pl-9 pr-2 py-1 space-y-1 text-xs hidden">
+          <a href="#" onclick="switchView('map')" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-brand-sidebarHover">Open Map View</a>
+          <a href="#" onclick="switchView('map')" class="block py-1.5 px-2 rounded text-slate-400 hover:text-white hover:bg-brand-sidebarHover">Compare Districts</a>
+        </div>
+      </div>
+
+      <!-- Nav Group 3: Simulation -->
+      <div class="space-y-1">
+        <button onclick="toggleAccordion('acc-sim')" class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-brand-sidebarHover text-slate-200 text-sm font-medium">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-sliders text-amber-400"></i>
+            <span>Run a Simulation</span>
+          </div>
+          <i id="icon-acc-sim" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+        </button>
+        <div id="acc-sim" class="pl-9 pr-2 py-1 space-y-1 text-xs hidden">
+          <a href="#" onclick="switchView('simulation')" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-brand-sidebarHover">Policy Simulation</a>
+          <a href="#" onclick="switchView('simulation')" class="block py-1.5 px-2 rounded text-slate-400 hover:text-white hover:bg-brand-sidebarHover">Download Report</a>
+        </div>
+      </div>
+
+      <!-- Nav Group 4: Administration -->
+      <div class="space-y-1">
+        <button onclick="toggleAccordion('acc-admin')" class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-brand-sidebarHover text-slate-200 text-sm font-medium">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-shield-halved text-purple-400"></i>
+            <span>Administration</span>
+          </div>
+          <i id="icon-acc-admin" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+        </button>
+        <div id="acc-admin" class="pl-9 pr-2 py-1 space-y-1 text-xs hidden">
+          <a href="#" onclick="switchView('admin'); switchAdminTab('tab-overview')" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-brand-sidebarHover">Dashboard</a>
+          <a href="#" onclick="switchView('admin'); switchAdminTab('tab-logs')" class="block py-1.5 px-2 rounded text-slate-400 hover:text-white hover:bg-brand-sidebarHover">Query Logs</a>
+          <a href="#" onclick="switchView('admin'); switchAdminTab('tab-alerts')" class="block py-1.5 px-2 rounded text-slate-400 hover:text-white hover:bg-brand-sidebarHover">Status Alerts</a>
+        </div>
+      </div>
+
+      <hr class="border-slate-800 my-2">
+
+      <!-- Starred Items -->
+      <div>
+        <h3 class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase px-3 mb-2">Starred</h3>
+        <div class="space-y-1 text-xs">
+          <a href="#" onclick="switchView('chat')" class="flex items-center space-x-2 px-3 py-1.5 rounded text-amber-300 hover:bg-brand-sidebarHover">
+            <i class="fa-solid fa-star text-[10px]"></i>
+            <span class="truncate">Punjab extraction simulation</span>
+          </a>
+          <a href="#" onclick="switchView('chat')" class="flex items-center space-x-2 px-3 py-1.5 rounded text-slate-300 hover:bg-brand-sidebarHover">
+            <i class="fa-regular fa-star text-[10px] text-slate-500"></i>
+            <span class="truncate">Rajasthan water stress</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Recent Queries -->
+      <div>
+        <h3 class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase px-3 mb-2">Recents</h3>
+        <div class="space-y-1 text-xs">
+          <a href="#" onclick="switchView('chat')" class="flex items-center justify-between px-3 py-1.5 rounded bg-brand-sidebarHover text-white font-medium">
+            <span class="truncate">Wardha district deep dive</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+          </a>
+          <a href="#" onclick="switchView('chat')" class="block px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 hover:bg-brand-sidebarHover truncate">Over-exploited zones</a>
+          <a href="#" onclick="switchView('chat')" class="block px-3 py-1.5 rounded text-slate-400 hover:text-slate-200 hover:bg-brand-sidebarHover truncate">Crop advisory MH</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Footer / User Profile -->
+    <div class="p-3 border-t border-slate-800 flex items-center justify-between bg-[#0a101f]">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-full bg-blue-900/80 border border-blue-500/30 flex items-center justify-center text-blue-300 font-bold text-xs">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+    </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-white leading-tight">User</p>
+          <p class="text-[10px] text-slate-400 leading-tight">CGWB Analyst</p>
+        </div>
+      </div>
+      <button onclick="switchView('home')" class="text-xs bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded flex items-center space-x-1 font-medium transition">
+        <i class="fa-solid fa-plus text-[10px]"></i>
+        <span>New</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN WORKSPACE ==================== -->
+  <div class="flex-1 flex flex-col min-w-0 h-full relative">
+
+    <!-- Top Navigation Header -->
+    <header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-brand-darkBg/90 backdrop-blur flex items-center justify-between px-4 z-20">
+      <div class="flex items-center space-x-3">
+        <button onclick="toggleSidebar()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+
+        <div id="header-breadcrumb" class="text-xs text-slate-500 dark:text-slate-400 flex items-center space-x-2">
+          <span>Home</span>
+        </div>
+      </div>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center space-x-3">
+        <div class="hidden sm:flex items-center space-x-2 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-xs font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Live - CGWB 2026</span>
+        </div>
+
+        <!-- Notification Dropdown -->
+        <div class="relative">
+          <button onclick="togglePop('pop-alerts')" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 relative">
+            <i class="fa-regular fa-bell text-lg"></i>
+            <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-amber-500"></span>
+          </button>
+          
+          <div id="pop-alerts" class="hidden absolute right-0 mt-2 w-80 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl p-4 z-50 text-xs">
+            <div class="flex justify-between items-center mb-3">
+              <h4 class="font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider text-[11px]">Live Status Alerts</h4>
+              <span class="text-[10px] bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400 px-2 py-0.5 rounded-full font-semibold">2 Active</span>
+            </div>
+            <div class="space-y-2.5">
+              <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+                <p class="font-semibold text-slate-800 dark:text-slate-200">Ludhiana, Punjab</p>
+                <div class="flex items-center space-x-2 mt-1 text-[11px]">
+                  <span class="px-1.5 py-0.5 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded">Critical</span>
+                  <i class="fa-solid fa-arrow-right text-[10px] text-slate-400"></i>
+                  <span class="px-1.5 py-0.5 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 rounded font-semibold">Over-Exploited</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-1">2 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility Dropdown -->
+        <div class="relative">
+          <button onclick="togglePop('pop-access')" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+            <i class="fa-solid fa-universal-access text-lg"></i>
+          </button>
+
+          <div id="pop-access" class="hidden absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl p-4 z-50 text-xs space-y-4">
+            <div>
+              <p class="font-semibold text-slate-500 dark:text-slate-400 mb-2 uppercase text-[10px] tracking-wider">Accessibility</p>
+              <label class="block text-slate-700 dark:text-slate-300 mb-1">Font Size</label>
+              <div class="flex space-x-1">
+                <button class="flex-1 py-1 bg-slate-100 dark:bg-slate-800 rounded hover:bg-slate-200">A-</button>
+                <button class="flex-1 py-1 bg-blue-600 text-white rounded font-bold">A</button>
+                <button class="flex-1 py-1 bg-slate-100 dark:bg-slate-800 rounded hover:bg-slate-200">A+</button>
+              </div>
+            </div>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
+              <button onclick="toggleDarkMode()" class="w-full flex items-center justify-between py-1 text-slate-700 dark:text-slate-300">
+                <span>Switch Dark/Light Theme</span>
+                <i class="fa-solid fa-moon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+          <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
+        </button>
+
+        <!-- User Profile Avatar -->
+        <button onclick="switchView('admin')" class="p-1 rounded-full border border-slate-200 dark:border-slate-700">
+          <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+    </svg>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Dynamic Content Container -->
+    <main class="flex-1 overflow-y-auto relative bg-slate-50 dark:bg-brand-darkBg">
+
+      <!-- VIEW 1: HOME VIEW -->
+      <section id="view-home" class="view-panel min-h-full flex flex-col justify-between p-6 max-w-5xl mx-auto">
+        <div class="flex-1 flex flex-col items-center justify-center my-8 text-center space-y-6">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/80 text-blue-700 dark:text-blue-400 text-xs font-semibold tracking-wider uppercase">
+            <span>AI-POWERED GROUNDWATER INTELLIGENCE — SIH 2026</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-serif font-bold text-slate-900 dark:text-white tracking-tight">
+            Ask India's<br/>Groundwater.
+          </h1>
+
+          <p class="text-slate-600 dark:text-slate-400 max-w-xl text-sm md:text-base">
+            Query 7,089 blocks across India. Simulate policy impacts. Get crop advisories. In your language.
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-2 max-w-2xl pt-2">
+            <button onclick="fillQuery('Groundwater level in Wardha?'); switchView('chat')" class="px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs transition">
+              Groundwater level in Wardha?
+            </button>
+            <button onclick="fillQuery('Over-exploited zones in Rajasthan'); switchView('chat')" class="px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs transition">
+              Over-exploited zones in Rajasthan
+            </button>
+            <button onclick="fillQuery('Simulate 20% reduction in Punjab'); switchView('chat')" class="px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs transition">
+              Simulate 20% reduction in Punjab
+            </button>
+            <button onclick="fillQuery('Crop advisory for Marathwada'); switchView('chat')" class="px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 hover:border-blue-500 text-slate-700 dark:text-slate-300 text-xs transition">
+              Crop advisory for Marathwada
+            </button>
+          </div>
+
+          <div class="w-full max-w-2xl mt-4">
+            <div class="relative flex items-center shadow-lg rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2">
+              <input id="home-input" type="text" placeholder="Ask about any district, block, or state in India..." class="w-full bg-transparent px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 focus:outline-none text-sm md:text-base" onkeydown="if(event.key==='Enter'){askFromHome();}">
+              <button id="mic-button" class="p-3 text-slate-500 hover:text-blue-600 transition-colors flex items-center justify-center" type="button">
+  <i class="fa-solid fa-microphone"></i>
+</button>
+              <button onclick="askFromHome()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-medium text-sm flex items-center space-x-2 shrink-0 transition">
+                <span>Ask</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2 text-center">Data source: CGWB 2026 - Ministry of Jal Shakti - Updated quarterly</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats strip below is commented out in the original design (kept as-is);
+           the real </section> above now properly closes view-home. -->
+        <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800/80 text-center">
+          <div class="p-3">
+            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400 font-mono">7,089</h3>
+            <p class="text-[11px] font-semibold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Blocks Monitored</p>
+          </div>
+      
+          <div class="p-3">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-200 font-mono">36</h3>
+            <p class="text-[11px] font-semibold uppercase text-slate-500 dark:text-slate-400 tracking-wider">States & UTs</p>
+          </div>
+          <div class="p-3">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-200 font-mono">4</h3>
+            <p class="text-[11px] font-semibold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Languages Supported</p>
+          </div>
+          <div class="p-3">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-200 font-mono">2026</h3>
+            <p class="text-[11px] font-semibold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Latest Assessment</p>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- VIEW 2: CHAT VIEW -->
+      <section id="view-chat" class="view-panel hidden h-full flex flex-col justify-between p-4 md:p-6 max-w-4xl mx-auto">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
+          <div class="text-xs text-slate-500 dark:text-slate-400">
+            <span class="font-bold text-slate-800 dark:text-slate-200">Home</span> / Wardha District Analysis
+          </div>
+          <div class="flex items-center space-x-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg text-xs">
+            <button class="px-2.5 py-1 rounded bg-blue-600 text-white font-bold">EN</button>
+            <button class="px-2.5 py-1 rounded text-slate-600 dark:text-slate-400 hover:text-white">HI</button>
+          </div>
+        </div>
+
+        <!-- Message thread — populated by script.js (appendUserMessage / appendAssistantMessage) -->
+        <div id="chat-messages" class="flex-1 overflow-y-auto space-y-4 pr-1">
+          <div data-chat-hint class="text-center text-xs text-slate-400 dark:text-slate-500 py-6">
+            Ask a question below to start — e.g. "Groundwater level in Wardha?"
+          </div>
+        </div>
+
+        <!-- Composer -->
+        <div class="mt-4 border-t border-slate-200 dark:border-slate-800 pt-3">
+          <div id="chat-error" class="hidden text-xs text-red-600 dark:text-red-400 mb-2"></div>
+          <div class="relative flex items-center shadow-lg rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2">
+            <input id="chat-input" type="text" placeholder="Ask about any district, block, or state in India..."
+              class="w-full bg-transparent px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 focus:outline-none text-sm md:text-base"
+              onkeydown="if(event.key==='Enter'){event.preventDefault(); sendChatMessage();}">
+            <button id="chat-send-btn" onclick="sendChatMessage()"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-medium text-sm flex items-center space-x-2 shrink-0 transition">
+              <span id="chat-send-label">Ask</span>
+              <i id="chat-send-icon" class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 text-center">Connected to INGRES-AI backend — session continues until you refresh</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
