@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     APP_ENV: str = "development"  # development | production
 
 
-    GROQ_API_KEY: str = "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"
+    GROQ_API_KEY: str = "put your appi groq key"
     GROQ_BASE_URL: str = "https://api.groq.com/openai/v1"
  
     GROQ_MODEL: str = "openai/gpt-oss-20b"
@@ -38,7 +38,8 @@ class Settings(BaseSettings):
     # Comma-separated list of origins allowed to call this API from a browser.
     FRONTEND_ORIGINS: str = (
         "http://localhost:3000,http://127.0.0.1:3000,"
-        "http://localhost:5173,http://127.0.0.1:5173"
+        "http://localhost:5173,http://127.0.0.1:5173,"
+        "http://localhost:5500,http://127.0.0.1:5500"
     )
 
     # --- Conversation memory (in-process, no DB) ------------------------
