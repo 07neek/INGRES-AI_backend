@@ -4,7 +4,6 @@ main.py
 FastAPI application entrypoint.
 
 Run with:  uvicorn app.main:app --reload --port 8000
-Docs at:   http://localhost:8000/docs
 """
 
 import logging
