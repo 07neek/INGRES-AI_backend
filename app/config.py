@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     APP_ENV: str = "development"  # development | production
 
 
-    GROQ_API_KEY: str = "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"
+    GROQ_API_KEY: str = "put your appi groq key"
     GROQ_BASE_URL: str = "https://api.groq.com/openai/v1"
  
     GROQ_MODEL: str = "openai/gpt-oss-20b"
