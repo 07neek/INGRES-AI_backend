@@ -4,11 +4,6 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
-
-# ---------------------------------------------------------------------------
-# Chat
-# ---------------------------------------------------------------------------
-
 class ChatMessage(BaseModel):
     role: str
     content: str
@@ -41,7 +36,7 @@ class GroundwaterYearRecord(BaseModel):
 
 
 class ChartData(BaseModel):
-    type: str  # "bar" | "pie" | "line"
+    type: str  # "bar"
     title: str
     labels: List[str]
     values: List[float]
@@ -59,10 +54,7 @@ class ChatResponse(BaseModel):
     llm_status: str
     generated_at: str
 
-
-# ---------------------------------------------------------------------------
 # Groundwater data endpoints
-# ---------------------------------------------------------------------------
 
 class CategorySummary(BaseModel):
     Safe: int = 0

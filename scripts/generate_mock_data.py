@@ -1,8 +1,4 @@
 """
-Generates app/data/mock_groundwater.json — a reference groundwater dataset used
-by the backend when the live National Water Data Portal API is not configured
-(USE_LIVE_WATER_API=false) or unreachable.
-
 The structure (state/district/block, annual extractable resource, extraction,
 stage-of-extraction %, category, water levels) mirrors the real fields used in
 CGWB's Dynamic Ground Water Resource Assessment and the INGRES portal:
