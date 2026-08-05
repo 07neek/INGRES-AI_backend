@@ -28,9 +28,7 @@ class WaterDataError(Exception):
     """Raised for unrecoverable data-layer errors (bad local dataset, etc.)."""
 
 
-# ---------------------------------------------------------------------------
 # Local reference dataset
-# ---------------------------------------------------------------------------
 
 def _load_local_dataset() -> dict:
     if not _DATA_PATH.exists():
@@ -100,10 +98,7 @@ def list_districts(state: Optional[str] = None) -> List[str]:
         if not state or state.lower() in rec["state"].lower()
     })
 
-
-# ---------------------------------------------------------------------------
 # Live National Water Data Portal API (data.gov.in-style)
-# ---------------------------------------------------------------------------
 
 async def _fetch_live(state: Optional[str], district: Optional[str]) -> Optional[List[dict]]:
     """Attempts the live API call. Returns None (never raises) on any failure
@@ -135,14 +130,12 @@ async def _fetch_live(state: Optional[str], district: Optional[str]) -> Optional
                 logger.warning("Live water API returned no records for state=%s district=%s", state, district)
                 return None
             return records
-    except Exception as exc:  # noqa: BLE001 - deliberately broad: any failure -> fallback
+    except Exception as exc: 
         logger.warning("Live water API call failed (%s) — falling back to local dataset.", exc)
         return None
 
 
-# ---------------------------------------------------------------------------
 # Public orchestrator
-# ---------------------------------------------------------------------------
 
 async def get_groundwater_data(
     state: Optional[str] = None,
@@ -186,7 +179,6 @@ def build_chart(records: List[dict], intent: str) -> Optional[dict]:
 
     if intent == "forecast":
         # line chart of stage_of_extraction_percent over years for the first
-        # matching block
         block_name = records[0]["block"]
         block_rows = sorted(
             [r for r in records if r["block"] == block_name],
@@ -199,8 +191,6 @@ def build_chart(records: List[dict], intent: str) -> Optional[dict]:
             "values": [r["stage_of_extraction_percent"] for r in block_rows],
         }
 
-    # Default: category distribution across the matched records (latest year
-    # per block to avoid double counting across the 5-year history)
     latest_by_block: Dict[str, dict] = {}
     for r in records:
         key = r["block"]
@@ -220,9 +210,7 @@ def build_chart(records: List[dict], intent: str) -> Optional[dict]:
     }
 
 
-# ---------------------------------------------------------------------------
-# Response-boundary conversion (raw dict -> validated Pydantic model)
-# ---------------------------------------------------------------------------
+# Response-boundary conversion (raw dict validated Pydantic model)
 
 def to_year_records(rows: List[dict]) -> List[GroundwaterYearRecord]:
     """Converts raw record dicts into validated GroundwaterYearRecord models.
@@ -236,7 +224,7 @@ def to_year_records(rows: List[dict]) -> List[GroundwaterYearRecord]:
     for row in rows:
         try:
             validated.append(GroundwaterYearRecord(**row))
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             logger.warning("Skipping a record that doesn't match GroundwaterYearRecord: %s", exc)
     return validated
 
