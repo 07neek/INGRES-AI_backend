@@ -1,3 +1,4 @@
+<img width="1366" height="768" alt="INGRES_scrrenshot" src="https://github.com/user-attachments/assets/a72b035d-599f-490f-81fe-e5a86a7fe541" />
 # INGRES-AI Backend
 
 Backend for **INGRES-AI** (SIH25066, Ministry of Jal Shakti) — a conversational
